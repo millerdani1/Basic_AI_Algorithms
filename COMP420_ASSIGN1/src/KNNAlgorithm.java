@@ -7,6 +7,11 @@ public class KNNAlgorithm {
         //for all points in the test data
         for(int i = 0; i<test.size(); i++){
 
+            //find distance to each training point and store in sorted list
+
+            //choose first k points
+
+            //assign class to
 
 
         }
@@ -17,6 +22,14 @@ public class KNNAlgorithm {
 
 
 
+    }
+
+    public static double calculateEuclidianDistance(double[] point1, double[] point2){
+        double total = 0.0;
+        for(int i=0; i<point1.length; i++) {
+            total = total + Math.pow((point1[i]-point2[i]), 2.0);
+        }
+        return Math.sqrt(total);
     }
 
 
