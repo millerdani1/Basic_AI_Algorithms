@@ -11,7 +11,7 @@ public class Main {
         if(args.length > 0) {
 
 
-            dataLoader.yeetus(args[0]);
+            dataLoader.readWineData(args[0]);
         }
     }
 }

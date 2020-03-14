@@ -6,18 +6,24 @@ public class WineDataLoader {
 
 
 
-    public void yeetus(String filePath) {
+    public void readWineData(String filePath) {
         try {
-            File myObj = new File(filePath);
-            Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
+            File wineFile = new File(filePath);
+            Scanner scanner = new Scanner(wineFile);
+            scanner.nextLine();//skips first line
+            while (scanner.hasNextLine()) {
+                String data = scanner.nextLine();
+                //System.out.println(data);
+                generateWineInstance(data);
             }
-            myReader.close();
+            scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    private void generateWineInstance(String data){
+
     }
 }
