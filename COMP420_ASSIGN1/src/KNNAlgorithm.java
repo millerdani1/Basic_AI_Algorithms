@@ -36,6 +36,7 @@ public class KNNAlgorithm {
 
     //calculates most frequent class
     private static int calculateMostFrequentClass(int[] inputArray){
+        if(inputArray.length==1) return inputArray[0];
 
         HashMap<Integer, Integer> classCount = new HashMap<Integer, Integer>();//key=class, value=frequency
         //counting the number of times each class occurs
