@@ -14,5 +14,6 @@ public class Main {
         } else {
             System.out.println("Two input files are required to run this program");
         }
+
     }
 }
