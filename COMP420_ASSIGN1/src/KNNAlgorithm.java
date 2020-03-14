@@ -3,6 +3,8 @@ import java.util.*;
 public class KNNAlgorithm {
 
     public static void runAlgorithm(ArrayList<WineTestObject> training, ArrayList<WineTestObject> test, int kValue){
+        int correct=0;
+        int incorrect=0;
 
         //for all points in the test data
         for(int i = 0; i<test.size(); i++){
@@ -21,9 +23,14 @@ public class KNNAlgorithm {
             }
             //assign class to point
             int yeet =calculateMostFrequentClass(classFrequencyArray);
+            if(yeet==test.get(i).getWineClass()) correct++;
+            else incorrect++;
             System.out.println("predicted: "+yeet+" Actual: "+ test.get(i).getWineClass());
 
         }
+        int total = correct+incorrect;
+        double percent = ((double)correct/(double)total)*100.0;
+        System.out.println(correct+"/"+total+" correct, or " + percent+"%");
 
     }
 
