@@ -2,23 +2,17 @@ import java.util.ArrayList;
 
 public class Main {
 
-    WineDataLoader dataLoader = new WineDataLoader();
-
-    ArrayList<WineInstance> wineTrainingData;
-    ArrayList<WineInstance> wineTestData;
-
     public static void main(String args[]){
         Main m = new Main(args);
     }
 
     public Main(String args[]){
-        wineTrainingData = new ArrayList<WineInstance>();
-        wineTestData = new ArrayList<WineInstance>();
-        
-        if(args.length > 0) {
 
+        if(args.length == 2) {
+            KNNAlgorithm.runAlgorithm(WineDataLoader.readWineData(args[0]), WineDataLoader.readWineData(args[1]));
 
-            dataLoader.readWineData(args[0]);
+        } else {
+            System.out.println("Two input files are required to run this program");
         }
     }
 }
