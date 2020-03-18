@@ -7,7 +7,7 @@ public class WineDataLoader {
 
     //takes wine data file and returns ArrayList of WineInstance objects
     public static ArrayList readWineData(String filePath) {
-        ArrayList<WineTestObject> arr = new ArrayList<WineTestObject>();
+        ArrayList<WineObject> arr = new ArrayList<WineObject>();
         try {
             File wineFile = new File(filePath);
             Scanner scanner = new Scanner(wineFile);
@@ -26,7 +26,7 @@ public class WineDataLoader {
     }
 
     //converts string of wine data and converts it into WineInstance object
-    private static WineTestObject generateWineInstance(String data){
+    private static WineObject generateWineInstance(String data){
 
         String[] split = data.split("\\s+");
         if(split.length!=14){
@@ -39,6 +39,32 @@ public class WineDataLoader {
         }
         int wineClass = Integer.parseInt(split[13]);
 
-        return new WineTestObject(wineAttributes, wineClass);
+        return new WineObject(wineAttributes, wineClass);
     }
+
+    public static Double[] calculateRanges(ArrayList<WineObject> arr){
+        int numOfAttributes = arr.get(0).getAttributes().length;
+        Double[] minValues = new Double[numOfAttributes];
+        Double[] maxValues = new Double[numOfAttributes];
+
+        for(int i =0;i< arr.size();i++){
+            for(int j=0;j< numOfAttributes;j++){
+
+                if(minValues[j] == null || minValues[j]> arr.get(i).getAttributes()[j]){
+                    minValues[j] = arr.get(i).getAttributes()[j];
+                }
+
+                if(maxValues[j] == null || maxValues[j] < arr.get(i).getAttributes()[j]){
+                    maxValues[j] = arr.get(i).getAttributes()[j];
+                }
+            }
+        }
+        Double[] range = new Double[numOfAttributes];
+        for(int i =0;i<numOfAttributes;i++){
+            range[i] = maxValues[i] - minValues[i];
+        }
+        return range;
+
+    }
+
 }

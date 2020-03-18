@@ -1,9 +1,9 @@
-public class WineTestObject {
+public class WineObject {
 
     private double[] attributes;
     private int wineClass;
 
-    public WineTestObject(double[] attributes, int wineClass) {
+    public WineObject(double[] attributes, int wineClass) {
 
         this.attributes = attributes;
         this.wineClass = wineClass;
