@@ -7,12 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1af967d-ce37-4bf2-afdf-d85b8b35292a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/COMP420_ASSIGN1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/KNNAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/KNNAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KNNAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KNNAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PointDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WineDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WineDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/KNNAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/META-INF/COMP420_ASSIGN1.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/PointDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/WineDataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/WineObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +36,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
-  </component>
   <component name="ProjectId" id="1Z3MQe8gQ17tUlhrO3QF4nJw8V8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,8 +48,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/COMP420_ASSIGN1_jar/COMP420_ASSIGN1.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -103,18 +102,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584578873404">
+    <state x="740" y="367" key="#BuildArtifactsBeforeRunChooser" timestamp="1584579660867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584578873404" />
+    <state x="740" y="367" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579660867" />
+    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584579746998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579746998" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1584223795345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584223795345" />
-    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584146123087">
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584579466749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584146123087" />
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579466749" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584575238262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,30 +126,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="156" key="#withArgumenats/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584146125291" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584142570245">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584579600021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584142570245" />
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1584578878910">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579600021" />
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1584579750638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584578878910" />
-    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1584578878910">
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
+    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1584579750638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584578878910" />
-    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1584578878910">
+    <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
+    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1584579750638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584578878910" />
-    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1584578878910">
+    <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
+    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1584579750638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584578878910" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1584145812415">
+    <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1584579512531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584145812415" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579512531" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584142534932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,77 +158,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584142605440" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1584579555503">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579555503" />
   </component>
 </project>
