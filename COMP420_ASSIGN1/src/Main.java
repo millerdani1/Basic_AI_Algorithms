@@ -2,29 +2,26 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         Main m = new Main(args);
     }
 
-    public Main(String args[]){
+    public Main(String args[]) {
 
-
-
-        int kValue =1;
-        if(args.length == 3){
+        int kValue = 1;
+        if (args.length == 3) {
 
             //ensure input k value is valid int
-            try{
+            try {
                 kValue = Integer.parseInt(args[2].trim());
-            }
-            catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println("K value must be valid int");
                 System.exit(0);
 
             }
         }
 
-        if(args.length == 2 || args.length == 3) {
+        if (args.length == 2 || args.length == 3) {
 
             ArrayList<WineObject> trainingData = WineDataLoader.readWineData(args[0]);
             ArrayList<WineObject> testData = WineDataLoader.readWineData(args[0]);
