@@ -2,7 +2,7 @@ import java.util.*;
 
 public class KNNAlgorithm {
 
-    public static void runAlgorithm(ArrayList<WineObject> training, ArrayList<WineObject> test, int kValue){
+    public static void runAlgorithm(ArrayList<WineObject> training, ArrayList<WineObject> test, int kValue, Double[] trainingRanges){
 
         //ensure kvalue is within bounds
         if(kValue<1 || kValue> training.size()){
@@ -17,7 +17,7 @@ public class KNNAlgorithm {
             //find distance to each training point and store in sorted list
             List<PointDistance> distanceList = new ArrayList<PointDistance>();
             for(int j = 0; j<training.size();j++){
-                distanceList.add(new PointDistance(calculateEuclidianDistance(test.get(i).getAttributes(), training.get(j).getAttributes()), training.get(j).getWineClass()));
+                distanceList.add(new PointDistance(calculateEuclidianDistance(test.get(i).getAttributes(), training.get(j).getAttributes(), trainingRanges), training.get(j).getWineClass()));
             }
             Collections.sort(distanceList);
 
@@ -66,10 +66,10 @@ public class KNNAlgorithm {
     }
 
     //calculates Euclidian distance between n dimensional vectors
-    private static double calculateEuclidianDistance(double[] point1, double[] point2){
+    private static double calculateEuclidianDistance(double[] point1, double[] point2, Double[] ranges){
         double total = 0.0;
         for(int i=0; i<point1.length; i++) {
-            total = total + Math.pow((point1[i]-point2[i]), 2.0);
+            total = total + Math.pow((point1[i]-point2[i]), 2.0)/Math.pow(ranges[i], 2.0);
         }
         return Math.sqrt(total);
     }

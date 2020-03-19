@@ -8,6 +8,8 @@ public class Main {
 
     public Main(String args[]){
 
+
+
         int kValue =1;
         if(args.length == 3){
 
@@ -23,7 +25,12 @@ public class Main {
         }
 
         if(args.length == 2 || args.length == 3) {
-            KNNAlgorithm.runAlgorithm(WineDataLoader.readWineData(args[0]), WineDataLoader.readWineData(args[1]), kValue);
+
+            ArrayList<WineObject> trainingData = WineDataLoader.readWineData(args[0]);
+            ArrayList<WineObject> testData = WineDataLoader.readWineData(args[0]);
+            Double[] trainingDataRanges = WineDataLoader.calculateRanges(trainingData);
+
+            KNNAlgorithm.runAlgorithm(trainingData, testData, kValue, trainingDataRanges);
         } else {
             System.out.println("This program requires two file names, and optionally a K value");
         }
