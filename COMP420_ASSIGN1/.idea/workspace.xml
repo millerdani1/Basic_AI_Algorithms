@@ -7,16 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1af967d-ce37-4bf2-afdf-d85b8b35292a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/COMP420_ASSIGN1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/KNNAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/META-INF/COMP420_ASSIGN1.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/PointDistance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/WineDataLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/WineObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP420_ASSIGN1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP420_A1_Part1_KNN.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +44,67 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.withArguments">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="COMP420_ASSIGN1" />
+      <module name="COMP420_A1_Part1_KNN" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="withArguments" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="COMP420_ASSIGN1" />
+      <module name="COMP420_A1_Part1_KNN" />
       <option name="PROGRAM_PARAMETERS" value="wine-training wine-test 17" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="COMP420_A1_Part1_KNN" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="COMP420_A1_Part1_KNN" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,26 +170,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579600021" />
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1584579750638">
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1584581572737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
-    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1584579750638">
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584581572737" />
+    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1584581572736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
-    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1584579750638">
+    <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584581572736" />
+    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1584581572736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
-    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1584579750638">
+    <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584581572736" />
+    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1584581572736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579750638" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1584579512531">
+    <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584581572736" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1585088587244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579512531" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585088587244" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584142534932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
