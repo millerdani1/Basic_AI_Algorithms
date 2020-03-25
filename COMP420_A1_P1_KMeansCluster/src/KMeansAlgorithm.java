@@ -7,20 +7,26 @@ public class KMeansAlgorithm {
         ArrayList<ClusterObject> centroids = new ArrayList<ClusterObject>();
         
         
-        //place centroids at random positions
+        //create k centroids at random positions
         for(int i=0;i<kValue;i++){
             centroids.add(new ClusterObject(range));
-            //System.out.println(centroids.get(i).getCentroidPosition());
         }
         
-        //while the centroids are moving
+        //until convergence 
         for (int yeet =0;yeet<150;yeet++){
             
             //for each point find the nearest centroid
             for(int i=0;i<data.size();i++){
+                int nearestCentroid = 0;
+                double nearestCentroidDistance = Double.MAX_VALUE;
                 for(int j=0;j<centroids.size();j++){
-                    calculateEuclidianDistance(data.get(i).getAttributes(), centroids.get(j).getCentroidPosition(), range.getRange());
+                    double distance = calculateEuclidianDistance(data.get(i).getAttributes(), centroids.get(j).getCentroidPosition(), range.getRange());
+                    if(distance<nearestCentroidDistance){
+                        nearestCentroidDistance = distance;
+                        nearestCentroid=j;
+                    }
                 }
+                //yeet
             }
 
             //for each cluster, move the clusters centroid to mean position
