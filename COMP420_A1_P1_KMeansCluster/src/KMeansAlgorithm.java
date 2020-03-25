@@ -2,13 +2,14 @@ import java.util.ArrayList;
 
 public class KMeansAlgorithm {
     
-    public static void runAlgorithm(ArrayList<WineObject> data, Double[] ranges, int kValue) {
+    public static void runAlgorithm(ArrayList<WineObject> data, int kValue) {
+        RangeData range = new RangeData(data);
         ArrayList<ClusterObject> centroids = new ArrayList<ClusterObject>();
         
         
         //place centroids at random positions
         for(int i=0;i<kValue;i++){
-            centroids.add(new ClusterObject());
+            centroids.add(new ClusterObject(range));
         }
         
         //while the centroids are moving
@@ -17,7 +18,7 @@ public class KMeansAlgorithm {
             //for each point find the nearest centroid
             for(int i=0;i<data.size();i++){
                 for(int j=0;j<centroids.size();j++){
-                    calculateEuclidianDistance(data.get(i).getAttributes(), centroids.get(j).getCentroidPosition(), ranges);
+                    calculateEuclidianDistance(data.get(i).getAttributes(), centroids.get(j).getCentroidPosition(), range.getRange());
                 }
             }
 

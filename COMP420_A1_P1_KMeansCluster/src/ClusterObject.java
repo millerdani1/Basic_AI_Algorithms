@@ -1,13 +1,14 @@
-
-
-
+import java.util.Random;
 
 public class ClusterObject {
 
     private double[] centroidPosition;
 
-    public ClusterObject(){
+    public ClusterObject(RangeData range){
     //place cluster at random position
+        for(int i=0;i<range.getMaxValues().length;i++){
+            centroidPosition[i] = range.getMinValues()[i] + new Random().nextDouble() * (range.getMaxValues()[i] - range.getMinValues()[i]);
+        }
     }
 
 

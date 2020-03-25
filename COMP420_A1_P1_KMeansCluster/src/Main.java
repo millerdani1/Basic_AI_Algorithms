@@ -24,11 +24,10 @@ public class Main {
         if (args.length == 1 || args.length == 2) {
 
             ArrayList<WineObject> data = WineDataLoader.readWineData(args[0]);
-            Double[] dataRanges = WineDataLoader.calculateRanges(data);
 
-            KMeansAlgorithm.runAlgorithm(data, dataRanges, kValue);
+            KMeansAlgorithm.runAlgorithm(data, kValue);
         } else {
-            System.out.println("This program requires a file name, and optionally a K value");
+            System.out.println("This program requires one file name, and optionally a K value");
         }
 
     }

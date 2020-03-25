@@ -42,29 +42,6 @@ public class WineDataLoader {
         return new WineObject(wineAttributes, wineClass);
     }
 
-    public static Double[] calculateRanges(ArrayList<WineObject> arr) {
-        int numOfAttributes = arr.get(0).getAttributes().length;
-        Double[] minValues = new Double[numOfAttributes];
-        Double[] maxValues = new Double[numOfAttributes];
 
-        for (int i = 0; i < arr.size(); i++) {
-            for (int j = 0; j < numOfAttributes; j++) {
-
-                if (minValues[j] == null || minValues[j] > arr.get(i).getAttributes()[j]) {
-                    minValues[j] = arr.get(i).getAttributes()[j];
-                }
-
-                if (maxValues[j] == null || maxValues[j] < arr.get(i).getAttributes()[j]) {
-                    maxValues[j] = arr.get(i).getAttributes()[j];
-                }
-            }
-        }
-        Double[] range = new Double[numOfAttributes];
-        for (int i = 0; i < numOfAttributes; i++) {
-            range[i] = maxValues[i] - minValues[i];
-        }
-        return range;
-
-    }
 
 }
