@@ -10,6 +10,7 @@ public class KMeansAlgorithm {
         //place centroids at random positions
         for(int i=0;i<kValue;i++){
             centroids.add(new ClusterObject(range));
+            //System.out.println(centroids.get(i).getCentroidPosition());
         }
         
         //while the centroids are moving
