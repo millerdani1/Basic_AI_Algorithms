@@ -9,11 +9,11 @@ public class Main {
     public Main(String args[]) {
 
         int kValue = 2;
-        if (args.length == 3) {
+        if (args.length == 2) {
 
             //ensure input k value is valid int
             try {
-                kValue = Integer.parseInt(args[2].trim());
+                kValue = Integer.parseInt(args[1].trim());
             } catch (NumberFormatException e) {
                 System.out.println("K value must be valid int");
                 System.exit(0);
@@ -21,14 +21,14 @@ public class Main {
             }
         }
 
-        if (args.length == 2 || args.length == 3) {
+        if (args.length == 1 || args.length == 2) {
 
-            ArrayList<WineObject> trainingData = WineDataLoader.readWineData(args[0]);
-            ArrayList<WineObject> testData = WineDataLoader.readWineData(args[0]);
+            ArrayList<WineObject> data = WineDataLoader.readWineData(args[0]);
+            Double[] dataRanges = WineDataLoader.calculateRanges(data);
 
-            KMeansAlgorithm.runAlgorithm(trainingData, testData, kValue);
+            KMeansAlgorithm.runAlgorithm(data, dataRanges, kValue);
         } else {
-            System.out.println("This program requires two file names, and optionally a K value");
+            System.out.println("This program requires a file name, and optionally a K value");
         }
 
     }
