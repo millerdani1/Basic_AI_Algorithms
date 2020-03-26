@@ -26,12 +26,17 @@ public class KMeansAlgorithm {
                         nearestCentroid=j;
                     }
                 }
-                //yeet
+                centroids.get(nearestCentroid).addDataPoint(data.get(i));
             }
 
-            //for each cluster, move the clusters centroid to mean position
+            //for each cluster, move the centroid to mean position
             for(int c=0;c<centroids.size();c++){
-                
+                //find mean position in cluster
+                double[] meanPos = calculateMeanPosition();
+                //move centroid to mean position
+                centroids.get(c).setCentroidPosition(meanPos);
+                //clear data points from centroid
+                centroids.get(c).clearDataPoints();
             }
         }
         
@@ -46,5 +51,10 @@ public class KMeansAlgorithm {
         }
         return Math.sqrt(total);
     }
+
+    private static double[] calculateMeanPosition(){
+
+    }
+
 
 }

@@ -1,8 +1,10 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ClusterObject {
 
     private double[] centroidPosition;
+    private ArrayList<WineObject> closestDataPoints = new ArrayList<WineObject>();
 
     public ClusterObject(RangeData range){
     //place cluster at random position
@@ -19,4 +21,15 @@ public class ClusterObject {
     public void setCentroidPosition(double[] centroidPosition) {
         this.centroidPosition = centroidPosition;
     }
+
+    public void clearDataPoints(){
+        this.closestDataPoints.clear();
+    }
+    public void addDataPoint(WineObject wineObject){
+        this.closestDataPoints.add(wineObject);
+    }
+    public ArrayList<WineObject> getClosestDataPoints(){
+        return this.closestDataPoints;
+    }
+
 }
