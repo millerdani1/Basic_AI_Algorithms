@@ -32,7 +32,7 @@ public class KMeansAlgorithm {
             //for each cluster, move the centroid to mean position
             for(int c=0;c<centroids.size();c++){
                 //find mean position in cluster
-                double[] meanPos = calculateMeanPosition();
+                double[] meanPos = calculateMeanPosition(centroids.get(c));
                 //move centroid to mean position
                 centroids.get(c).setCentroidPosition(meanPos);
                 //clear data points from centroid
@@ -52,7 +52,19 @@ public class KMeansAlgorithm {
         return Math.sqrt(total);
     }
 
-    private static double[] calculateMeanPosition(){
+    private static double[] calculateMeanPosition(ClusterObject cluster){
+
+        double[] newPos = new double[cluster.getClosestDataPoints().get(0).getAttributes().length];
+
+        for(int i =0; i < cluster.getClosestDataPoints().size();i++){
+            for(int j =0;j<cluster.getClosestDataPoints().get(i).getAttributes().length; j++){
+                newPos[j] = newPos[j] + cluster.getClosestDataPoints().get(i).getAttributes()[j];
+            }
+        }
+        for(int r =0;r<newPos.length;r++){
+            newPos[r] = newPos[r]/cluster.getClosestDataPoints().size();
+        }
+        return newPos;
 
     }
 
