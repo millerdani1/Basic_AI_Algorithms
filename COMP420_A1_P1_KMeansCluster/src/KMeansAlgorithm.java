@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class KMeansAlgorithm {
     
@@ -11,10 +12,13 @@ public class KMeansAlgorithm {
         for(int i=0;i<kValue;i++){
             centroids.add(new ClusterObject(range));
         }
-        
-        //until convergence 
-        for (int yeet =0;yeet<150;yeet++){
-            
+
+
+        //until convergence
+        boolean hasReachedConvergence = false;
+        while (!hasReachedConvergence){
+            clearDataPoints(centroids);
+
             //for each point find the nearest centroid
             for(int i=0;i<data.size();i++){
                 int nearestCentroid = 0;
@@ -30,17 +34,42 @@ public class KMeansAlgorithm {
             }
 
             //for each cluster, move the centroid to mean position
+            hasReachedConvergence = true;
             for(int c=0;c<centroids.size();c++){
-                //find mean position in cluster
-                double[] meanPos = calculateMeanPosition(centroids.get(c));
-                //move centroid to mean position
-                centroids.get(c).setCentroidPosition(meanPos);
-                //clear data points from centroid
-                centroids.get(c).clearDataPoints();
+                //ensure cluster has at least one data point
+                if(!centroids.get(c).getClosestDataPoints().isEmpty()) {
+                    //find mean position in cluster
+                    double[] meanPos = calculateMeanPosition(centroids.get(c));
+
+                    if (!Arrays.equals(meanPos, centroids.get(c).getCentroidPosition()))
+                        hasReachedConvergence = false;
+
+                    //move centroid to mean position
+                    centroids.get(c).setCentroidPosition(meanPos);
+                }
             }
+        }
+
+        //print out cluster data
+        System.out.println("K Value: "+kValue);
+        System.out.println("----------------");
+        for(int i =0;i<centroids.size();i++){
+            String actualClassString ="Cluster " + (i+1) + ":\n" + "Actual classes: ";
+            for(int j=0;j<centroids.get(i).getClosestDataPoints().size();j++){
+                actualClassString = actualClassString + centroids.get(i).getClosestDataPoints().get(j).getWineClass();
+                if(j!=centroids.get(i).getClosestDataPoints().size()-1)
+                    actualClassString = actualClassString+", ";
+            }
+            System.out.println(actualClassString);
         }
         
         
+    }
+
+    private static void clearDataPoints(ArrayList<ClusterObject> centroids) {
+        for(int i=0;i<centroids.size();i++){
+            centroids.get(i).clearDataPoints();
+        }
     }
 
     //calculates Euclidian distance between n dimensional vectors
@@ -67,6 +96,4 @@ public class KMeansAlgorithm {
         return newPos;
 
     }
-
-
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
@@ -22,7 +23,6 @@ public class Main {
         }
 
         if (args.length == 1 || args.length == 2) {
-
             ArrayList<WineObject> data = WineDataLoader.readWineData(args[0]);
 
             KMeansAlgorithm.runAlgorithm(data, kValue);
