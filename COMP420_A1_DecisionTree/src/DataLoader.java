@@ -20,8 +20,8 @@ public class DataLoader {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            System.out.println("The file '"+filePath+"' could not be found");
+            System.exit(0);
         }
         return arr;
     }

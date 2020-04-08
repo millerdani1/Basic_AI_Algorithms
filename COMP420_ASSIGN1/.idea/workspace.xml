@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1af967d-ce37-4bf2-afdf-d85b8b35292a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/DataLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +101,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="367" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579660867" />
-    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586349468657">
+    <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586349676438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093268856" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586349468657" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586349676438" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1584223795345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
