@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/COMP420_A1_KNN.iml" filepath="$PROJECT_DIR$/COMP420_A1_KNN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/COMP420_A1_DecisionTree.iml" filepath="$PROJECT_DIR$/COMP420_A1_DecisionTree.iml" />
     </modules>
   </component>
 </project>
