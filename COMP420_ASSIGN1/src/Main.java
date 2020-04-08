@@ -24,7 +24,7 @@ public class Main {
         if (args.length == 2 || args.length == 3) {
 
             ArrayList<WineObject> trainingData = WineDataLoader.readWineData(args[0]);
-            ArrayList<WineObject> testData = WineDataLoader.readWineData(args[0]);
+            ArrayList<WineObject> testData = WineDataLoader.readWineData(args[1]);
             Double[] trainingDataRanges = WineDataLoader.calculateRanges(trainingData);
 
             KNNAlgorithm.runAlgorithm(trainingData, testData, kValue, trainingDataRanges);
