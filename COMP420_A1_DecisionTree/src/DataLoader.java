@@ -1,20 +1,22 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class DataLoader {
 
     //gets an array of different attributes from first line of file
-    public static ArrayList<String> readAttributeNames(String filePath) {
-        ArrayList<String> arr = new ArrayList<String>();
+    public static HashMap readAttributeNames(String filePath) {
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
         try {
             File file = new File(filePath);
             Scanner scanner = new Scanner(file);
             String data = scanner.nextLine();
             String[] split = data.split("\\s+");
+
             for (int i = 1; i < split.length; i++) {//include all values except first (class header)
-                arr.add(split[i]);
+                map.put(i-1, split[i]);
             }
 
             scanner.close();
@@ -22,7 +24,7 @@ public class DataLoader {
             System.out.println("The file '" + filePath + "' could not be found");
             System.exit(0);
         }
-        return arr;
+        return map;
     }
 
     //iterates through data and returns list of instance objects
