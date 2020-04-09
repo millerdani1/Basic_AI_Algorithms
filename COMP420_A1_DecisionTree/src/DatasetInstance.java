@@ -14,7 +14,7 @@ public class DatasetInstance {
         return attributes;
     }
 
-    public boolean isWillLive() {
+    public boolean getWillLive() {
         return willLive;
     }
 }

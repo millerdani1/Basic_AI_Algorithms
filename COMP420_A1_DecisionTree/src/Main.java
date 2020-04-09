@@ -4,11 +4,12 @@ public class Main {
 
     public static void main(String args[]) {
 
-        if(args.length==2) {
+        if (args.length == 2) {
             //input data
+            ArrayList<String> attributeNames = DataLoader.readAttributeNames(args[0]);
             ArrayList<DatasetInstance> trainingData = DataLoader.readData(args[0]);
             ArrayList<DatasetInstance> testData = DataLoader.readData(args[1]);
-            DecisionTreeLearningAlgorithm.runAlgorithm();
+            DecisionTreeLearningAlgorithm.buildTree(trainingData, attributeNames);
         } else {
             System.out.println("A training dataset and testing dataset are required fro this program to run");
         }
