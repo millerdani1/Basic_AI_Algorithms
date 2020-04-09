@@ -10,8 +10,7 @@ public class Main {
             HashMap<Integer, String> attributes = DataLoader.readAttributeNames(args[0]);
             ArrayList<DatasetInstance> trainingData = DataLoader.readData(args[0]);
             ArrayList<DatasetInstance> testData = DataLoader.readData(args[1]);
-            //DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes);
-            System.out.println(attributes);
+            Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes);
         } else {
             System.out.println("A training dataset and testing dataset are required fro this program to run");
         }
