@@ -44,8 +44,14 @@ public class DecisionTreeLearningAlgorithm {
         return null;
     }
 
-    private static ArrayList getAttribteInstances(boolean isTrue, String attribute){
-        return null;
+    private static ArrayList getAttribteInstances(ArrayList<DatasetInstance> instances, boolean isTrue, String attribute){
+        ArrayList<DatasetInstance> newArr = new ArrayList<DatasetInstance>();
+        for(DatasetInstance instance: instances){
+            if(instance.getAttributes().get(attribute)== isTrue){
+                newArr.add(instance);
+            }
+        }
+        return newArr;
     }
 
     //checks if all instances in a set have the same class (set is pure)
