@@ -27,7 +27,24 @@ public class DataLoader {
         return arr;
     }
 
-    //gets an array of different attributes from first line of file
+    //just returns attribute names
+    public static ArrayList readAttributeNames(String filePath) {
+        ArrayList<String> attributeNames = null;
+        try {
+            File file = new File(filePath);
+            Scanner scanner = new Scanner(file);
+            attributeNames = formatAttributeNames(scanner.nextLine());
+
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("The file '" + filePath + "' could not be found");
+            System.exit(0);
+        }
+        return attributeNames;
+    }
+
+
+    //converts string of attribute names to arraylist of strings
     public static ArrayList formatAttributeNames(String data) {
         ArrayList<String> list = new ArrayList<String>();
         String[] split = data.split("\\s+");
