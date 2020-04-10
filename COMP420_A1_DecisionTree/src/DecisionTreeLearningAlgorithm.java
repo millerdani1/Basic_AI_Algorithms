@@ -8,7 +8,7 @@ public class DecisionTreeLearningAlgorithm {
 
     }
 
-    public static Node buildTree(ArrayList<DatasetInstance> instances, HashMap<Integer, String> attributes) {
+    public static Node buildTree(ArrayList<DatasetInstance> instances, ArrayList<String> attributes) {
 
         if (instances.isEmpty()) {
 
@@ -19,19 +19,32 @@ public class DecisionTreeLearningAlgorithm {
         if (attributes.isEmpty()) {
 
         } else {
-            //String bestAttName;
-            int bestAttIndex;
-            ArrayList<DatasetInstance> bestInstsTrue;
-            ArrayList<DatasetInstance> bestInstsFalse;
-            for (Integer i : attributes.keySet()) { //for each attribute
+            //gets initial attribute purity to measure against
+            String bestAttribute = attributes.get(0);
+            ArrayList<DatasetInstance> bestInstsTrue = getAttribteInstances(true, bestAttribute);
+            ArrayList<DatasetInstance> bestInstsFalse = getAttribteInstances(false, bestAttribute);
+            Double bestAttributePurity = checkPurity(bestInstsTrue, bestInstsFalse);
+            for (int i=1;i<attributes.size();i++) { //for each attribute
                 //separate instances into two sets
-                ArrayList<DatasetInstance> attributesTrue = new ArrayList<DatasetInstance>();
-                ArrayList<DatasetInstance> attributesFalse = new ArrayList<DatasetInstance>();
-                checkPurity(attributesTrue, attributesFalse);
+                ArrayList<DatasetInstance> attributesTrue = getAttribteInstances(true, attributes.get(i));
+                ArrayList<DatasetInstance> attributesFalse = getAttribteInstances(false, attributes.get(i));
+                Double purity = checkPurity(attributesTrue, attributesFalse);
+
+                //if weighted average purity of these sets is best so far
+                if(purity>bestAttributePurity){
+                    bestAttribute = attributes.get(i);
+                    bestInstsTrue = attributesTrue;
+                    bestInstsFalse = attributesFalse;
+                    bestAttributePurity = purity;
+                }
 
             }
 
         }
+        return null;
+    }
+
+    private static ArrayList getAttribteInstances(boolean isTrue, String attribute){
         return null;
     }
 
@@ -43,8 +56,8 @@ public class DecisionTreeLearningAlgorithm {
         return true;
     }
 
-    private static void checkPurity(ArrayList<DatasetInstance> attributesTrue, ArrayList<DatasetInstance> attributesFalse){
-
+    private static Double checkPurity(ArrayList<DatasetInstance> attributesTrue, ArrayList<DatasetInstance> attributesFalse){
+        return null;
     }
 
 }

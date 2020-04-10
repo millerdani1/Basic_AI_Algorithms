@@ -10,7 +10,7 @@ public class Main {
             ArrayList<String> attributes = DataLoader.readAttributeNames(args[0]);
             ArrayList<DatasetInstance> trainingData = DataLoader.readData(args[0]);
             ArrayList<DatasetInstance> testData = DataLoader.readData(args[1]);
-            //Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes);
+            Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes);
             for(String i:attributes){
                 System.out.println(i);
             }
