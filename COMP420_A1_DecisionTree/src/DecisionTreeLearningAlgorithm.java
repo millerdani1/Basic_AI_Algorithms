@@ -21,13 +21,13 @@ public class DecisionTreeLearningAlgorithm {
         } else {
             //gets initial attribute purity to measure against
             String bestAttribute = attributes.get(0);
-            ArrayList<DatasetInstance> bestInstsTrue = getAttribteInstances(true, bestAttribute);
-            ArrayList<DatasetInstance> bestInstsFalse = getAttribteInstances(false, bestAttribute);
+            ArrayList<DatasetInstance> bestInstsTrue = getAttribteInstances(instances, true, bestAttribute);
+            ArrayList<DatasetInstance> bestInstsFalse = getAttribteInstances(instances, false, bestAttribute);
             Double bestAttributePurity = checkPurity(bestInstsTrue, bestInstsFalse);
             for (int i=1;i<attributes.size();i++) { //for each attribute
                 //separate instances into two sets
-                ArrayList<DatasetInstance> attributesTrue = getAttribteInstances(true, attributes.get(i));
-                ArrayList<DatasetInstance> attributesFalse = getAttribteInstances(false, attributes.get(i));
+                ArrayList<DatasetInstance> attributesTrue = getAttribteInstances(instances, true, attributes.get(i));
+                ArrayList<DatasetInstance> attributesFalse = getAttribteInstances(instances, false, attributes.get(i));
                 Double purity = checkPurity(attributesTrue, attributesFalse);
 
                 //if weighted average purity of these sets is best so far
