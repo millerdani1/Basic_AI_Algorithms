@@ -11,19 +11,21 @@ public class DecisionTreeLearningAlgorithm {
     public static Node buildTree(Dataset instances, ArrayList<String> attributes) {
 
         if (instances.getData().isEmpty()) {
-
+            return new Node("", null, null);
         }
-        if (checkIsPure(instances.getData())) {
-
+        if (instances.isPure()) {
+            return new Node("", null, null);
         }
         if (attributes.isEmpty()) {
-
+            return new Node("", null, null);
         } else {
+
             //gets initial attribute purity to measure against
             String bestAttribute = attributes.get(0);
             Dataset bestInstsTrue = getAttribteInstances(instances, true, bestAttribute);
             Dataset bestInstsFalse = getAttribteInstances(instances, false, bestAttribute);
             Double bestAttributePurity = getWeightedPurity(bestInstsTrue, bestInstsFalse);
+
             for (int i = 1; i < attributes.size(); i++) { //for each attribute
                 //separate instances into two sets
                 Dataset attributesTrue = getAttribteInstances(instances, true, attributes.get(i));
@@ -46,9 +48,7 @@ public class DecisionTreeLearningAlgorithm {
             //create Node
             return new Node(bestAttribute, left ,right);
         }
-        return null;
     }
-
 
     private static Dataset getAttribteInstances(Dataset instances, boolean isTrue, String attribute) {
         ArrayList<DatasetInstance> newArr = new ArrayList<DatasetInstance>();
@@ -60,26 +60,16 @@ public class DecisionTreeLearningAlgorithm {
         return new Dataset(newArr);
     }
 
-    //checks if all instances in a set have the same class (set is pure)
-    private static boolean checkIsPure(ArrayList<DatasetInstance> instances) {
-        for (int i = 1; i < instances.size(); i++) {
-            if (instances.get(i).getWillLive() != instances.get(0).getWillLive()) return false;
-        }
-        return true;
-    }
-
+    //calculates weighted purity of two Datasets
     private static Double getWeightedPurity(Dataset attributesTrue, Dataset attributesFalse) {
         int total = attributesTrue.getData().size()+attributesFalse.getData().size();
         return ((attributesTrue.getData().size()/total) * attributesTrue.calculatePurity(true)) + ((attributesFalse.getData().size()/total) * attributesFalse.calculatePurity(false));
     }
 
-
-
+    //takes an Arraylist of attributes and a attribute, then returns a new Arraylist with that specified attribute removed
     private static ArrayList<String> removeBestAttribute(ArrayList<String> attributes, String bestAttribute){
         ArrayList<String> arr = attributes;
         arr.remove(bestAttribute);
         return arr;
     }
-
-
 }
