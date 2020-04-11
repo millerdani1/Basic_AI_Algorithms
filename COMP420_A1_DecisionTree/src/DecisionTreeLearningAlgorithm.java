@@ -23,15 +23,15 @@ public class DecisionTreeLearningAlgorithm {
             String bestAttribute = attributes.get(0);
             ArrayList<DatasetInstance> bestInstsTrue = getAttribteInstances(instances, true, bestAttribute);
             ArrayList<DatasetInstance> bestInstsFalse = getAttribteInstances(instances, false, bestAttribute);
-            Double bestAttributePurity = checkPurity(bestInstsTrue, bestInstsFalse);
-            for (int i=1;i<attributes.size();i++) { //for each attribute
+            Double bestAttributePurity = getWeightedPurity(bestInstsTrue, bestInstsFalse);
+            for (int i = 1; i < attributes.size(); i++) { //for each attribute
                 //separate instances into two sets
                 ArrayList<DatasetInstance> attributesTrue = getAttribteInstances(instances, true, attributes.get(i));
                 ArrayList<DatasetInstance> attributesFalse = getAttribteInstances(instances, false, attributes.get(i));
-                Double purity = checkPurity(attributesTrue, attributesFalse);
+                Double purity = getWeightedPurity(attributesTrue, attributesFalse);
 
                 //if weighted average purity of these sets is best so far
-                if(purity>bestAttributePurity){
+                if (purity < bestAttributePurity) {
                     bestAttribute = attributes.get(i);
                     bestInstsTrue = attributesTrue;
                     bestInstsFalse = attributesFalse;
@@ -44,10 +44,11 @@ public class DecisionTreeLearningAlgorithm {
         return null;
     }
 
-    private static ArrayList getAttribteInstances(ArrayList<DatasetInstance> instances, boolean isTrue, String attribute){
+
+    private static ArrayList getAttribteInstances(ArrayList<DatasetInstance> instances, boolean isTrue, String attribute) {
         ArrayList<DatasetInstance> newArr = new ArrayList<DatasetInstance>();
-        for(DatasetInstance instance: instances){
-            if(instance.getAttributes().get(attribute)== isTrue){
+        for (DatasetInstance instance : instances) {
+            if (instance.getAttributes().get(attribute) == isTrue) {
                 newArr.add(instance);
             }
         }
@@ -62,8 +63,20 @@ public class DecisionTreeLearningAlgorithm {
         return true;
     }
 
-    private static Double checkPurity(ArrayList<DatasetInstance> attributesTrue, ArrayList<DatasetInstance> attributesFalse){
-        return null;
+    private static Double getWeightedPurity(ArrayList<DatasetInstance> attributesTrue, ArrayList<DatasetInstance> attributesFalse) {
+        int total = attributesTrue.size()+attributesFalse.size();
+        return ((attributesTrue.size()/total) * calculatePurity(attributesTrue, true)) + ((attributesFalse.size()/total) * calculatePurity(attributesFalse, false));
     }
+
+    private static  Double calculatePurity(ArrayList<DatasetInstance> instances, boolean correct){
+        //count num of correctly classified instances
+        int correctNum = 0;
+        for(DatasetInstance i: instances){
+            if(i.getWillLive() == correct) correctNum++;
+        }
+        int incorrectNum=instances.size()-correctNum;
+        return 1 - Math.pow(correctNum/instances.size(), 2.0) - Math.pow(incorrectNum/instances.size(), 2.0);
+    }
+
 
 }
