@@ -11,13 +11,14 @@ public class DecisionTreeLearningAlgorithm {
     public static Node buildTree(Dataset instances, ArrayList<String> attributes) {
 
         if (instances.getData().isEmpty()) {
-            return new Node("", null, null);
+            return null;
         }
         if (instances.isPure()) {
-            return new Node("", null, null);
+            return new LeafNode(instances.getData().get(0).getInstanceClass(), 1.0);
         }
         if (attributes.isEmpty()) {
-            return new Node("", null, null);
+            classStats mostCommonClass = instances.getMostCommonClass();
+            return new LeafNode(mostCommonClass.getName(), mostCommonClass.getProbability());
         } else {
 
             //gets initial attribute purity to measure against
@@ -46,7 +47,7 @@ public class DecisionTreeLearningAlgorithm {
             Node left = buildTree(bestInstsTrue, newAttributes);
             Node right = buildTree(bestInstsFalse, newAttributes);
             //create Node
-            return new Node(bestAttribute, left ,right);
+            return new BranchNode(bestAttribute, left ,right);
         }
     }
 
@@ -63,7 +64,7 @@ public class DecisionTreeLearningAlgorithm {
     //calculates weighted purity of two Datasets
     private static Double getWeightedPurity(Dataset attributesTrue, Dataset attributesFalse) {
         int total = attributesTrue.getData().size()+attributesFalse.getData().size();
-        return ((attributesTrue.getData().size()/total) * attributesTrue.calculatePurity(true)) + ((attributesFalse.getData().size()/total) * attributesFalse.calculatePurity(false));
+        return ((attributesTrue.getData().size()/total) * attributesTrue.calculatePurity("live")) + ((attributesFalse.getData().size()/total) * attributesFalse.calculatePurity("die"));
     }
 
     //takes an Arraylist of attributes and a attribute, then returns a new Arraylist with that specified attribute removed

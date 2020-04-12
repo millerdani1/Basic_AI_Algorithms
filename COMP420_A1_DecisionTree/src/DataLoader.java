@@ -68,14 +68,6 @@ public class DataLoader {
                 System.exit(0);
             }
         }
-        boolean willLive = false;
-        if (split[0].equals("live")) willLive = true;
-        else if (split[0].equals("die")) willLive = false;
-        else {
-            System.out.println("Found value in class data != to live or die");
-            System.exit(0);
-        }
-
-        return new DatasetInstance(attributes, willLive);
+        return new DatasetInstance(attributes, split[0]);
     }
 }

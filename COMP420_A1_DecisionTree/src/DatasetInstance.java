@@ -4,18 +4,18 @@ import java.util.HashMap;
 public class DatasetInstance {
 
     private HashMap<String, Boolean> attributes;
-    private boolean willLive;
+    private String instanceClass;
 
-    public DatasetInstance(HashMap<String, Boolean> attributes, boolean willLive){
-        this.attributes=attributes;
-        this.willLive=willLive;
+    public DatasetInstance(HashMap<String, Boolean> attributes, String instanceClass) {
+        this.attributes = attributes;
+        this.instanceClass = instanceClass;
     }
 
     public HashMap<String, Boolean> getAttributes() {
         return attributes;
     }
 
-    public boolean getWillLive() {
-        return willLive;
+    public String getInstanceClass() {
+        return instanceClass;
     }
 }
