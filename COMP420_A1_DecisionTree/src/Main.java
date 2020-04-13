@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Main {
 
@@ -9,10 +8,16 @@ public class Main {
             //input data
             ArrayList<String> attributes = DataLoader.readAttributeNames(args[0]);
             Dataset trainingData = new Dataset(DataLoader.readData(args[0]));
-            Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes);
-            //Dataset testData = new Dataset(DataLoader.readData(args[1]));
+            classStats baselinePredictor = trainingData.getMostCommonClass();
+            Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes, baselinePredictor);
+
+            Dataset testData = new Dataset(DataLoader.readData(args[1]));
+            for(DatasetInstance i: testData.getData()){
+                rootNode.testData(i);
+            }
+            //rootNode.report("   ");
         } else {
-            System.out.println("A training dataset and testing dataset are required fro this program to run");
+            System.out.println("A training dataset and testing dataset are required for this program to run");
         }
 
     }

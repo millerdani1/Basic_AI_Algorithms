@@ -1,17 +1,11 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
 
 public class DecisionTreeLearningAlgorithm {
 
-    public static void runAlgorithm() {
-
-    }
-
-    public static Node buildTree(Dataset instances, ArrayList<String> attributes) {
+    public static Node buildTree(Dataset instances, ArrayList<String> attributes, classStats baselinePredictor) {
 
         if (instances.getData().isEmpty()) {
-            return null;
+            return new LeafNode(baselinePredictor.getName(), baselinePredictor.getProbability());
         }
         if (instances.isPure()) {
             return new LeafNode(instances.getData().get(0).getInstanceClass(), 1.0);
@@ -44,8 +38,8 @@ public class DecisionTreeLearningAlgorithm {
             }
             //create child nodes
             ArrayList<String> newAttributes = removeBestAttribute(attributes, bestAttribute);
-            Node left = buildTree(bestInstsTrue, newAttributes);
-            Node right = buildTree(bestInstsFalse, newAttributes);
+            Node left = buildTree(bestInstsTrue, newAttributes, baselinePredictor);
+            Node right = buildTree(bestInstsFalse, newAttributes, baselinePredictor);
             //create Node
             return new BranchNode(bestAttribute, left ,right);
         }

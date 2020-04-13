@@ -56,7 +56,7 @@ public class Dataset {
         }
 
         //calculate classes probability and return the data
-        double probability = mostRepeated.getValue() / this.data.size();
+        double probability = (double) mostRepeated.getValue() / (double) this.data.size();
         return new classStats(mostRepeated.getKey(), probability);
 
     }
