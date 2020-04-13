@@ -13,24 +13,18 @@ public class Dataset {
     }
 
     //calculates purity of this dataset
-    public Double calculatePurity(String instanceClass) {
+    public double calculatePurity() {
         if (this.data.isEmpty()) return 0.0;//dunno if this is the correct way of dealing with this
-        //count num of correctly classified instances
-        int correctNum = 0;
-        for (DatasetInstance i : this.data) {
-            if (i.getInstanceClass().equals(instanceClass)) correctNum++;
-        }
-        int incorrectNum = this.data.size() - correctNum;
-        return 1.0 - Math.pow((double)correctNum / (double) this.data.size(), 2.0) - Math.pow((double)incorrectNum / (double)this.data.size(), 2.0);
 
-    }
+       String firstClass = this.data.get(0).getInstanceClass();
+       double firstClassCount = 1.0;
+       for(int i =1;i<this.data.size();i++){
+           if(this.data.get(i).getInstanceClass() == firstClass)
+               firstClassCount++;
+       }
+       double secondClassCount = this.data.size()-firstClassCount;
 
-    //checks if all instances in a set have the same class (set is pure)
-    public boolean isPure() {
-        for (int i = 1; i < this.data.size(); i++) {
-            if (!this.data.get(i).getInstanceClass().equals(this.data.get(0).getInstanceClass())) return false;
-        }
-        return true;
+       return (firstClassCount*secondClassCount)/Math.pow(firstClassCount+secondClassCount, 2.0);
     }
 
     //returns datasets most common class and its probability

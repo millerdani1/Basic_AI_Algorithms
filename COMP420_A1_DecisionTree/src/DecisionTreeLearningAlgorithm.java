@@ -7,7 +7,7 @@ public class DecisionTreeLearningAlgorithm {
         if (instances.getData().isEmpty()) {
             return new LeafNode(baselinePredictor.getName(), baselinePredictor.getProbability());
         }
-        if (instances.isPure()) {
+        if (instances.calculatePurity() == 0.0) {
             return new LeafNode(instances.getData().get(0).getInstanceClass(), 1.0);
         }
         if (attributes.isEmpty()) {
@@ -41,7 +41,7 @@ public class DecisionTreeLearningAlgorithm {
             Node left = buildTree(bestInstsTrue, newAttributes, baselinePredictor);
             Node right = buildTree(bestInstsFalse, newAttributes, baselinePredictor);
             //create Node
-            return new BranchNode(bestAttribute, left ,right);
+            return new BranchNode(bestAttribute, left, right);
         }
     }
 
@@ -58,12 +58,16 @@ public class DecisionTreeLearningAlgorithm {
 
     //calculates weighted purity of two Datasets
     private static Double getWeightedPurity(Dataset attributesTrue, Dataset attributesFalse) {
-        int total = attributesTrue.getData().size()+attributesFalse.getData().size();
-        return ((attributesTrue.getData().size()/total) * attributesTrue.calculatePurity("live")) + ((attributesFalse.getData().size()/total) * attributesFalse.calculatePurity("die"));
+        double totalSize = attributesTrue.getData().size() + attributesFalse.getData().size();
+        double trueWeight = attributesTrue.getData().size() / totalSize;
+        double falseWeight = attributesFalse.getData().size() / totalSize;
+
+        return trueWeight * attributesTrue.calculatePurity() + falseWeight * attributesFalse.calculatePurity();
+
     }
 
     //takes an Arraylist of attributes and a attribute, then returns a new Arraylist with that specified attribute removed
-    private static ArrayList<String> removeBestAttribute(ArrayList<String> attributes, String bestAttribute){
+    private static ArrayList<String> removeBestAttribute(ArrayList<String> attributes, String bestAttribute) {
         ArrayList<String> tempArr = new ArrayList(attributes);
         tempArr.remove(bestAttribute);
         return tempArr;

@@ -18,6 +18,7 @@ public class Main {
 
             //print predicted classes
             Dataset testData = new Dataset(DataLoader.readData(args[1]));
+            System.out.println("predicted Classes");
             for (DatasetInstance i : testData.getData()) {
                 rootNode.testData(i);
             }
