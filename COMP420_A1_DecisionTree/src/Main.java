@@ -10,12 +10,16 @@ public class Main {
             classStats baselinePredictor = trainingData.getMostCommonClass();
             Node rootNode = DecisionTreeLearningAlgorithm.buildTree(trainingData, attributes, baselinePredictor);
 
+            //print out tree
+            System.out.println("Tree Visualisation:\n");
+            rootNode.report("   ");
+            System.out.println("");
+            //print predicted classes
             Dataset testData = new Dataset(DataLoader.readData(args[1]));
             for (DatasetInstance i : testData.getData()) {
                 rootNode.testData(i);
             }
-            System.out.println("\nTree Visualisation:\n");
-            rootNode.report("   ");
+
         } else {
             System.out.println("A training dataset and testing dataset are required for this program to run");
         }

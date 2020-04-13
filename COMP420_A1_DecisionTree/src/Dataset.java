@@ -20,13 +20,14 @@ public class Dataset {
             if (i.getInstanceClass().equals(instanceClass)) correctNum++;
         }
         int incorrectNum = this.data.size() - correctNum;
-        return 1 - Math.pow(correctNum / this.data.size(), 2.0) - Math.pow(incorrectNum / this.data.size(), 2.0);
+        return 1.0 - Math.pow((double)correctNum / (double) this.data.size(), 2.0) - Math.pow((double)incorrectNum / (double)this.data.size(), 2.0);
+
     }
 
     //checks if all instances in a set have the same class (set is pure)
     public boolean isPure() {
         for (int i = 1; i < this.data.size(); i++) {
-            if (this.data.get(i).getInstanceClass().equals(this.data.get(0).getInstanceClass())) return false;
+            if (!this.data.get(i).getInstanceClass().equals(this.data.get(0).getInstanceClass())) return false;
         }
         return true;
     }
