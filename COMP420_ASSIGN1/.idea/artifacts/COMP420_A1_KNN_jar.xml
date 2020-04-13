@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="COMP420_A1_KNN:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/COMP420_A1_KNN_jar</output-path>
+    <root id="archive" name="COMP420_A1_KNN.jar">
+      <element id="module-output" name="COMP420_A1_KNN" />
+    </root>
+  </artifact>
+</component>

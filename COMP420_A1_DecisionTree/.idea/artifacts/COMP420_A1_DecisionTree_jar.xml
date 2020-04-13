@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="COMP420_A1_DecisionTree:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/COMP420_A1_DecisionTree_jar</output-path>
+    <root id="archive" name="COMP420_A1_DecisionTree.jar">
+      <element id="module-output" name="COMP420_A1_DecisionTree" />
+    </root>
+  </artifact>
+</component>

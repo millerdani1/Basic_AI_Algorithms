@@ -2,11 +2,36 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="COMP420_ASSIGN1:jar" />
+      <artifact name="COMP420_A1_KNN:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1af967d-ce37-4bf2-afdf-d85b8b35292a" name="Default Changelist" comment="" />
+    <list default="true" id="c1af967d-ce37-4bf2-afdf-d85b8b35292a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/Dataset.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/Dataset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/DecisionTreeLearningAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/DecisionTreeLearningAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/classStats.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/out/production/COMP420_A1_DecisionTree/classStats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Dataset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Dataset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/DecisionTreeLearningAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/DecisionTreeLearningAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COMP420_A1_DecisionTree/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/COMP420_ASSIGN1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/COMP420_ASSIGN1_jar/COMP420_ASSIGN1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/KNNAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/PointDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/WineDataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_KNN/WineObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/KNNAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/PointDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/WineDataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_A1_Part1_KNN/WineObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP420_ASSIGN1/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +64,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -106,10 +131,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584223795345" />
-    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584579466749">
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586777943503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1584579466749" />
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586777943503" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584575238262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,31 +149,31 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093277724" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586336112104" />
-    <state width="1877" height="127" key="GridCell.Tab.0.bottom" timestamp="1586351270678">
+    <state width="1877" height="127" key="GridCell.Tab.0.bottom" timestamp="1586777958207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="127" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093278622" />
-    <state width="1877" height="127" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586351270678" />
-    <state width="1877" height="127" key="GridCell.Tab.0.center" timestamp="1586351270678">
+    <state width="1877" height="127" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586777958207" />
+    <state width="1877" height="127" key="GridCell.Tab.0.center" timestamp="1586777958207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="127" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093278622" />
-    <state width="1877" height="127" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586351270678" />
-    <state width="1877" height="127" key="GridCell.Tab.0.left" timestamp="1586351270678">
+    <state width="1877" height="127" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586777958207" />
+    <state width="1877" height="127" key="GridCell.Tab.0.left" timestamp="1586777958207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="127" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093278622" />
-    <state width="1877" height="127" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586351270678" />
-    <state width="1877" height="127" key="GridCell.Tab.0.right" timestamp="1586351270678">
+    <state width="1877" height="127" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586777958207" />
+    <state width="1877" height="127" key="GridCell.Tab.0.right" timestamp="1586777958207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="127" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585093278622" />
-    <state width="1877" height="127" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586351270678" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1586335852665">
+    <state width="1877" height="127" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586777958207" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1586777947236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.-86.1920.1040@0.0.1920.1040" timestamp="1585088587244" />
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586335852665" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586777947236" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584142534932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

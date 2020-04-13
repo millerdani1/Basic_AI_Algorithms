@@ -45,6 +45,7 @@ public class DecisionTreeLearningAlgorithm {
         }
     }
 
+    //returns arraylist of instances with the same boolean value of a specific attribute
     private static Dataset getAttribteInstances(Dataset instances, boolean isTrue, String attribute) {
         ArrayList<DatasetInstance> newArr = new ArrayList<DatasetInstance>();
         for (DatasetInstance instance : instances.getData()) {

@@ -12,6 +12,7 @@ public class Dataset {
         this.data = instances;
     }
 
+    //calculates purity of this dataset
     public Double calculatePurity(String instanceClass) {
         if (this.data.isEmpty()) return 0.0;//dunno if this is the correct way of dealing with this
         //count num of correctly classified instances
