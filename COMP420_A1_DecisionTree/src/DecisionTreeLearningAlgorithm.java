@@ -63,8 +63,8 @@ public class DecisionTreeLearningAlgorithm {
 
     //takes an Arraylist of attributes and a attribute, then returns a new Arraylist with that specified attribute removed
     private static ArrayList<String> removeBestAttribute(ArrayList<String> attributes, String bestAttribute){
-        ArrayList<String> arr = attributes;
-        arr.remove(bestAttribute);
-        return arr;
+        ArrayList<String> tempArr = new ArrayList(attributes);
+        tempArr.remove(bestAttribute);
+        return tempArr;
     }
 }
